@@ -1,0 +1,476 @@
+openapi: 3.0.3
+info:
+  title: Netflix Clone API
+  description: |
+    REST API for Netflix Clone streaming platform featuring user authentication, 
+    video browsing, profile management, and payment processing.
+    
+    ## Authentication
+    Most endpoints require Bearer token authentication. Include the token in the Authorization header:
+    ```
+    Authorization: Bearer <your-jwt-token>
+    ```
+    
+    ## Rate Limiting
+    - Authenticated users: 1000 requests per hour
+    - Unauthenticated: 100 requests per hour
+  version: 1.0.0
+  contact:
+    name: Netflix Clone API Support
+    email: api-support@netflixclone.com
+  license:
+    name: MIT License
+    url: https://choosealicense.com/licenses/mit/
+
+servers:
+  - url: http://localhost:8080
+    description: Development server
+  - url: https://api.netflixclone.com
+    description: Production server
+
+security:
+  - BearerAuth: []
+
+paths:
+  /api/videoSuggestions/{suggestionCategory}:
+    get:
+      tags:
+        - Video Suggestions
+      summary: Get video suggestions by category
+      description: Retrieves a list of videos filtered by suggestion category
+      parameters:
+        - name: suggestionCategory
+          in: path
+          required: true
+          description: Category of video suggestions
+          schema:
+            type: string
+            enum: [Now Playing, Top Rated Movies, New Releases, Originals]
+            example: Now Playing
+      responses:
+        '200':
+          description: Successfully retrieved video suggestions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VideoMetaData'
+        '404':
+          description: No videos found for the specified category
+
+  /api/register:
+    post:
+      tags:
+        - User Account
+      summary: Register new user
+      description: Creates a new user account
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserAccount'
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAccount'
+        '400':
+          description: Invalid user data
+
+  /api/verifyEmail/{email}:
+    get:
+      tags:
+        - User Account
+      summary: Verify email exists
+      description: Checks if an email address is already registered
+      security: []
+      parameters:
+        - name: email
+          in: path
+          required: true
+          description: Email address to verify
+          schema:
+            type: string
+            format: email
+            example: user@example.com
+      responses:
+        '200':
+          description: Email verification result
+          content:
+            application/json:
+              schema:
+                type: boolean
+
+  /api/authenticator/{email}/{password}:
+    get:
+      tags:
+        - User Account
+      summary: Authenticate user
+      description: Validates user credentials
+      security: []
+      parameters:
+        - name: email
+          in: path
+          required: true
+          description: User email
+          schema:
+            type: string
+            format: email
+            example: user@example.com
+        - name: password
+          in: path
+          required: true
+          description: User password
+          schema:
+            type: string
+            example: password123
+      responses:
+        '200':
+          description: Authentication result
+          content:
+            application/json:
+              schema:
+                type: boolean
+
+  /api/payment/card:
+    post:
+      tags:
+        - Payment
+      summary: Validate credit/debit card
+      description: Validates the provided credit or debit card details
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Card'
+      responses:
+        '200':
+          description: Card validation completed
+          content:
+            application/json:
+              schema:
+                type: boolean
+        '400':
+          description: Invalid card details provided
+
+  /api/payment/proceed:
+    post:
+      tags:
+        - Payment
+      summary: Process subscription payment
+      description: Processes payment for Netflix Clone subscription
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentWrapper'
+      responses:
+        '201':
+          description: Payment processed successfully
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Payment processed successfully.
+        '400':
+          description: Invalid payment details
+        '500':
+          description: Payment processing failed
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Payment processing failed.
+
+  /api/profile/add:
+    post:
+      tags:
+        - User Profiles
+      summary: Create new user profile
+      description: Creates a new profile for a user account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+      responses:
+        '201':
+          description: Profile created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+        '400':
+          description: Invalid profile data
+
+  /api/profiles/{email}:
+    get:
+      tags:
+        - User Profiles
+      summary: Get all user profiles
+      description: Retrieves all profiles associated with a user account
+      parameters:
+        - name: email
+          in: path
+          required: true
+          description: User email address
+          schema:
+            type: string
+            format: email
+            example: user@example.com
+      responses:
+        '200':
+          description: Successfully retrieved user profiles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserProfile'
+        '404':
+          description: User not found
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    VideoMetaData:
+      type: object
+      description: Video metadata containing information about movies and TV shows
+      required:
+        - videoTitle
+        - Thumbnail
+        - suggestionCategory
+        - videoCategory
+        - videoRating
+        - releaseYear
+      properties:
+        videoID:
+          type: integer
+          format: int64
+          description: Unique identifier for the video
+          example: 1
+        videoTitle:
+          type: string
+          description: Title of the video
+          example: The Witcher
+        Thumbnail:
+          type: string
+          description: Thumbnail image URL for the video
+          example: witcher_thumbnail
+        suggestionCategory:
+          type: string
+          description: Category for content suggestions
+          example: Now Playing
+          enum: [Now Playing, Top Rated Movies, New Releases, Originals]
+        videoCategory:
+          type: string
+          description: Genre or category of the video
+          example: Fantasy - Action
+        videoRating:
+          type: number
+          format: double
+          description: Rating of the video (0.0 to 10.0)
+          example: 8.2
+          minimum: 0.0
+          maximum: 10.0
+        releaseYear:
+          type: string
+          description: Year the video was released
+          example: "2019"
+
+    UserAccount:
+      type: object
+      description: User account information for authentication and registration
+      required:
+        - email
+        - password
+      properties:
+        accountId:
+          type: integer
+          format: int64
+          description: Unique identifier for the user account
+          example: 1
+        email:
+          type: string
+          format: email
+          description: User's email address
+          example: user@example.com
+        password:
+          type: string
+          description: User's password
+          example: password123
+
+    Card:
+      type: object
+      description: Credit/Debit card information for payment processing
+      required:
+        - email
+        - cardNumber
+        - cardHoldName
+        - expDate
+        - cvv
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Unique identifier for the card record
+          example: 1
+        email:
+          type: string
+          format: email
+          description: Email address associated with the card
+          example: user@example.com
+        cardNumber:
+          type: string
+          description: Credit/Debit card number
+          example: "4111111111111111"
+        cardHoldName:
+          type: string
+          description: Name on the card
+          example: John Doe
+        expDate:
+          type: string
+          description: Card expiration date (MM/YY format)
+          example: "12/25"
+        cvv:
+          type: integer
+          description: Card verification value (3-4 digits)
+          example: 123
+          minimum: 100
+          maximum: 9999
+
+    Payment:
+      type: object
+      description: Payment transaction record
+      required:
+        - email
+        - paymentAmount
+      properties:
+        referenceNo:
+          type: integer
+          format: int64
+          description: Unique reference number for the transaction
+          example: 1001
+        email:
+          type: string
+          format: email
+          description: Email address of the user making the payment
+          example: user@example.com
+        cardNumber:
+          type: string
+          description: Last 4 digits of the card number used for payment
+          example: "1111"
+        paymentAmount:
+          type: number
+          format: double
+          description: Amount paid for the subscription
+          example: 15.99
+        paymentDateTime:
+          type: string
+          format: date-time
+          description: Date and time when the payment was processed
+          example: "2024-01-01T12:00:00"
+
+    PaymentWrapper:
+      type: object
+      description: Wrapper object containing card and payment information
+      required:
+        - newCard
+        - newPayment
+      properties:
+        newCard:
+          $ref: '#/components/schemas/Card'
+        newPayment:
+          $ref: '#/components/schemas/Payment'
+
+    UserProfile:
+      type: object
+      description: User profile information within an account
+      required:
+        - email
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Unique identifier for the profile
+          example: 1
+        email:
+          type: string
+          format: email
+          description: Email address of the account owner
+          example: user@example.com
+        profileName:
+          type: string
+          description: Display name for the profile
+          example: John
+          default: My Profile
+        profilePicture:
+          type: string
+          description: Profile picture identifier
+          example: i1
+          default: i1
+        language:
+          type: string
+          description: Preferred language for the profile
+          example: English
+          default: English
+        maturity:
+          type: string
+          description: Content maturity level
+          example: General Audience
+          default: General Audience
+        gameHandle:
+          type: string
+          description: Gaming handle for the profile
+          example: player123
+
+  responses:
+    UnauthorizedError:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Unauthorized access
+    
+    NotFoundError:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Resource not found
+    
+    ValidationError:
+      description: Invalid input data
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Invalid input data
+              details:
+                type: array
+                items:
+                  type: string

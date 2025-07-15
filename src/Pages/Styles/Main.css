@@ -1,0 +1,193 @@
+.home-main-hero,.home-main-shadow{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../signUp.jpg');
+}
+.home-main-shadow{
+    background-image: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 1) 100%);
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+}
+.home-main-container{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 3%;
+}
+.hero-masterhead{
+    position: absolute;
+    top: 0%;
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    gap: 65%;
+}
+.brand-logo{
+    height: 220%;
+}
+h1{
+    font-size: 310%;
+    font-weight: 800;
+}
+h4,h5{
+    font-weight: 500;
+    font-size: 140%;
+}
+.form-container,.form-container2{
+    display: flex;
+    width: 45%;
+    height: 8%;
+    column-gap: 1.5%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-container2{
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+.btn-1,.btn-2{
+    font-size: 120%;
+    height: 100%;
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+.btn-2{
+    font-size: 100%;
+}
+.btn-3{
+    height: 54px;
+}
+.btn-1:hover,.btn-2:hover{
+    background-color: rgb(204, 0, 0);
+}
+.email-input-container{
+    width: 75%;
+}
+.email-input,.email-input:focus{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.78);
+    color: white;
+}
+.email-input::placeholder{
+    color: rgb(222, 218, 218);
+}
+.email-input:focus{
+    box-shadow: none;
+    border: solid 2px white;
+}
+.home-section1,.home-section2,.home-section3,.home-section4{
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 13%;
+    border-top: solid rgb(46, 46, 46) 8px;
+}
+.home-section3{
+    height: 50vh;
+}
+.home-section5{
+    border-top: solid #2e2e2e 8px;
+    border-bottom: solid rgb(46, 46, 46) 8px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0%;
+}
+.section-content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+}
+.section-heading{
+    color: white;
+    font-size: 260%;
+}
+.section-text{
+    color: white;
+    font-weight: 300;
+    font-size: 180%;
+}
+.section-img{
+    height: 77%;
+    z-index: 999;
+}
+.video-1{
+    width: 23.5%;
+    height: 29%;
+    margin-top: -1%;
+    margin-left: 41.5%;
+    position: absolute;
+}
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.faq{
+    width: 70%;
+    text-align: left;
+    font-size: 100%;
+}
+.faq-body,.faq-item{
+    background-color:#2e2e2e;
+    color: white;
+    border: none;
+    font-size: 120%;
+    margin-bottom: 1%;
+}
+.accordion-button{
+    background-color: #222222 !important;
+    color: white !important;
+    position: relative;
+    box-shadow: none !important;
+    font-size: 70%;
+    padding: 2% 2%;
+}
+.accordion-button:active, .accordion-button:focus{
+    border: none !important;
+}
+.accordion-button:hover{
+    background: #535353 !important;
+}
+.plus{
+    height: 35px;
+    right: 1.2%;
+    position: absolute;
+    z-index: 9999;
+}
+.email-required{
+    position: absolute;
+    margin-bottom: -18%;
+    margin-left: -36.5%;
+}
+.email-required2{
+    position: absolute;
+    margin-bottom: -46%;
+    margin-left: -35%;
+}

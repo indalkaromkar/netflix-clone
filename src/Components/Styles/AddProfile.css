@@ -1,0 +1,93 @@
+.add-profile-inner{
+    width: 35%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.add-profile-header{
+    font-size: 270%;
+    text-align: left;
+}
+.add-profile-sub{
+    font-size: 120%;
+    color: #747474;
+    text-align: left;
+}
+.cancel-bottom{
+    margin-bottom: 0%;
+}
+.btn-container-add{
+    display: flex;
+    font-size: 105%;
+    gap: 10px;
+    font-weight: 500;
+}
+.add-profile-btn1{
+    padding: 1% 4%;
+    color: black;
+    background-color: #dddddd;
+    cursor: pointer;
+}
+.add-profile-btn2{
+    padding: 1% 4%;
+    border: 1px solid  #747474;
+    color: #747474;
+    cursor: pointer;
+}
+.add-profile-btn2:hover{
+    color: white;
+    border-color: white;
+}
+.add-profile-line{
+    color: #747474;
+}
+.add-profile-inner-container{
+    display: flex;
+    align-items: center;
+}
+.profile-pic{
+    background-size: cover;
+    height: 130px;
+    width: 130px;
+    border-radius: 7px;
+}
+.add-profile-name{
+    height: 30%;
+    width: 100%;
+    border-radius: 0px;
+    background-color: #5b5b5b;
+    color: white;
+    border: none;
+}
+.add-profile-name::placeholder{
+    color: white;
+}
+.add-profile-name:focus{
+    box-shadow: none;
+    background-color: #5b5b5b;
+    color: white;
+
+}
+.add-profile-btn1.active {
+    background-color: #ed0000; 
+    color: white;
+}
+.kid-check{
+    color: white;
+    font-size: 120%;
+    margin-left: 5%;
+}
+.type-area{
+    width: 70%;
+    margin-left: 5%
+}
+.profile-name-validate{
+    margin-top: 1%;
+    color: green;
+    font-size: 88%;
+    text-align: left;
+}
+.profile-name-notvalidate{
+    color: red;
+}

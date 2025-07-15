@@ -1,0 +1,126 @@
+.edit-Container{
+    top: 0%;
+    left: 0%;
+    justify-content: start;
+    padding-top: 2.5%;
+}
+.edit-container-inner{
+    width:25%;
+    height: 70%;
+}
+.edit-header{
+    font-size: 270%;
+    text-align: left;
+    color: white;
+}
+.edit-middle-container{
+    display: flex;
+}
+.edit-middle-left{
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    border-radius: 7px;
+}
+.edit-line{
+    color: #dddddd;
+    margin: 0% 0%;
+    margin-bottom: 4%;
+}
+.edit-profile-name{
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+}
+.edit-middle-right{
+    margin-left: 5.4%;
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+}
+.option-heading{
+    color: white;
+    font-size: 115%;
+    text-align: left;
+    margin-top: -5%;
+}
+.option-sub{
+    color: white;
+    font-size: 90%;
+    line-height: 125%;
+    margin-top: 4%;
+    text-align: left;
+}
+.create-gameHandle{
+    width: 100%;
+    margin-top: 7%;
+    margin-left: 0%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+}
+.create-gameHandle::placeholder{
+    color: #d6d6d6;
+}
+.edit-line2{
+    margin-top: 8%;
+}
+.edit-line3{
+    margin-top: 5%;
+}
+.option-heading2{
+    margin-top: 2%;
+}
+.save-btn-profile{
+    color: black;
+    background-color: #dddddd;
+    border: none;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.save-btn-profile:hover{
+    background-color: #ed0000; 
+    color: white;
+}
+.edit-profile-btns:hover{
+    color: white;
+    border-color: white;
+}
+.bold4{
+    font-weight: 700;
+}
+.dropmenu{
+    background-color: transparent;
+    color: white;
+    width: 50%;
+    margin-top: -7%;
+    margin-bottom: 10%;
+    border-radius: 0px;
+    font-size: 90%;
+}
+.dropmenu:focus{
+    box-shadow: none;
+    border-color: white;
+}
+.dropmenu option {
+    background-color: black; 
+    color: white;
+}
+.dropmenu2{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    width: 82%;
+}
+.change-pic{
+    margin-left: 0%;
+}
+.edit-pic{
+    height: 20%;
+    margin-top: 60%;
+    margin-left: 40%;
+}
+.edit-overlay{
+    cursor: pointer;
+    width: 129px;
+    height: 130px;
+}

@@ -1,0 +1,37 @@
+.confirmPic-inner{
+    width: 25%;
+    height: 60%;
+}
+.confirmPic-heading{
+    color: white;
+    font-size: 150%;
+}
+.ldi{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.confirm-btn{
+    justify-content: center;
+}
+.pics2-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+.name{
+    margin-top: 110%;
+    color: rgb(196, 196, 196);
+}
+.confirm-pic{
+    gap: 25px;
+}
+.select-icon:hover{
+    border: none;
+}
+.select-icon{
+    cursor: default;
+}
+.right-arrow-pic{
+    height: 20%;
+}

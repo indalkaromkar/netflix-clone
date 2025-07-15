@@ -1,0 +1,183 @@
+.browse-container{
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    overflow-x: hidden !important;
+    background-color: black;
+    transition: height 0.3s ease;
+}
+.main-hero-playback{
+    width: 100%;
+    height: 100vh;
+}
+.browse {
+    position: relative;
+}
+.info-area{
+    position: absolute;
+    z-index: 9;
+    width: 45%;
+    height: 45%;
+    margin-top: -32%;
+    margin-left: 8%;
+    color: white;
+    text-align: left;
+}
+.playback-title{
+    height: 35%;
+    margin-bottom: 3%;
+    margin-left: -1%;
+}
+.playback-info-btn{
+    display: flex;
+    gap: 2%;
+    font-size: 110%;
+}
+.playback-info{
+    font-size: 105%;
+}
+.play-btn{
+    color: black;
+    background-color: white;
+    padding: 1.5% 3%;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+.play-btn:hover{
+    background-color: rgb(211, 0, 0);
+    color: white;
+}
+.info-btn{
+    color: white;
+    background-color: rgba(145, 145, 145, 0.5);
+    padding: 1.5% 3%;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+.info-btn:hover{
+    background-color: rgba(145, 145, 145, 0.8);
+}
+.circle-btn{
+    border: 3px solid rgba(145, 145, 145, 1);;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 100%;
+}
+.circle-btn:hover{
+    border: 3px solid white;
+}
+.info-btn-icon{
+    position: absolute;
+    font-size: 150%;
+    margin-left: -22%;
+}
+.info-btn-icon2{
+    font-size: 200%;
+    margin-left: -13%;
+}
+.carouse-title{
+    color: white;
+    font-size: 130%;
+    text-align: left;
+}
+.carouse-bar{
+    margin-top: -7.5%;
+    position: relative;
+    width: 100%;
+    padding-left:8%;
+    padding-bottom: 1.5%;
+    margin-bottom: 8%;
+    overflow: visible;
+}
+.carouse-netflix{
+    width: 1288px;
+    height: 198px;
+    margin-top: 1%;
+    display: flex;
+    gap: 1.5%;
+}
+.main-hero{
+    background-color: black;
+    height: 100%;
+}
+.swiper{
+    margin-top: -8%;
+    width: 83vw;
+    height: 30vh;
+    padding: 10% 0%;
+    overflow: visible !important;
+    overflow-x:hidden;
+}
+.overflow-Hider{
+    background-color: black;
+    width: 8%;
+    height: 30%;
+    position: absolute;
+    z-index: 99;
+    margin-top: -8%;
+}
+.overflow-Hider2{
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: 92.3%;
+    width: 10%;
+}
+.swiper-button-next{
+    color: white !important;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 50%, transparent 100%);
+    height: 101% !important;
+    margin-top: -8.2% !important;
+    margin-right: -20% !important;
+    padding-right: 20% !important;
+}
+.swiper-button-prev{
+    color: white !important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
+    height: 101% !important;
+    margin-top: -8.2% !important;
+    margin-left: -20% !important;
+    padding-left: 20% !important;
+}
+.swiper-button-disabled{
+    opacity: 0 !important;
+}
+.carouse-net{
+    margin-bottom: 10%;
+}
+.carouse-net2{
+    margin-bottom: 2%;
+}
+.hoverText{
+    margin-top: 13%;
+    background-color: white;
+    color: black;
+    position: absolute;
+    font-size: 85%;
+    font-weight: 600;
+    padding: 0.5% 2%;
+    display: none;
+}
+.list-hover:hover .hoverText {
+    display: block;
+}
+.list-action{
+    color: white;
+}
+.hoverTextUp{
+    margin-top: -25%;
+}

@@ -1,0 +1,73 @@
+.VideoCardInfo-Card{
+    background-color: #141414;
+    width: 20vw;
+    height: 50vh;
+    position: absolute;
+    z-index: 999;
+    border-radius: 10px;
+    border: 1px solid #141414;
+    padding-left: 16.5%;
+    padding-bottom: 3%;
+    box-shadow: 0px 4px 8px rgba(168, 168, 168, 0.5);
+}
+.preview-img{
+    border-radius: 10px 10px 0px 0px;
+    width: 108.3%;
+    height: 50%;
+    margin-left: -8.4%;
+    background-size: cover;
+    background-position: center;
+}
+.btn-container-card{
+    display: flex;
+    gap: 4%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+.circle-btn2{
+    background-color: #262626;
+    border-color: #69707e;
+    color: white;
+    font-size: 120%;
+}
+.circle-btn2:hover{
+    border-color: white;
+}
+.space-div{
+    width: 20%;
+    cursor: default;
+}
+.circle-btn2-play{
+    background-color: white;
+    color: black;
+    border: none;
+}
+.circle-btn2-play:hover{
+    background-color: rgb(215, 215, 215);
+    border: none;
+}
+.VideoCardInfo-Card-title{
+    font-size: 100%;
+    color: white;
+    text-align: left;
+    margin-top: -3%;
+}
+.VideoCardInfo-Card-sub1{
+    font-weight: 700;
+    color: #22c55e;
+    text-align: left;
+}
+.movie-year{
+    color: #9ca3af;
+}
+.rating-year,.catagory{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+.movie-category{
+    font-size: 85%;
+    color: #9ca3af;
+    text-align: left;
+}
+

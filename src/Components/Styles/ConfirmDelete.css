@@ -1,0 +1,49 @@
+.inner-delete{
+    width: 35%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5%;
+}
+.keepP{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.deleteP{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.delete-heading{
+    font-size: 220%;
+    color: white;
+    text-align: left;
+}
+.delete-inner{
+    display: flex;
+    margin-top: 0%;
+    margin-bottom: 3%;
+}
+.delete-sub{
+    color: white;
+    font-size: 95%;
+    text-align: left;
+}
+.delete-left{
+    height: 130px;
+    width: 130px;
+    border-radius: 7px;
+}
+.delete-right-side{
+    margin-left: 6%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.delete-profile-name{
+    color: rgb(176, 176, 176);
+    margin-top: 105%;
+}
+.delete-bottom-line{
+    margin-top: 6%;
+}

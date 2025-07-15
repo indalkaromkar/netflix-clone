@@ -1,0 +1,75 @@
+.header-strip{
+    display: flex;
+    margin-top: -35%;
+    margin-left: -55%;
+}
+.picPicker-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.picPicker-heading-text{
+    color: white;
+    font-size: 250%;
+}
+.pickPicker-sub{
+    color: white;
+    font-size: 150%;
+}
+.back-Icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+}
+.back-i{
+    height: 40%;
+    cursor: pointer;
+    margin-left: -10%;
+}
+.pic-container{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five columns of equal width */
+    gap: 25px;
+}
+.icon{
+    width: 130px;
+    height: 130px;
+    background-size: cover;
+    cursor: pointer;
+}
+.icon:hover{
+    border: 3px solid white;
+}
+.i1{
+    background-image: url('./pic-1.png');
+}
+.i2{
+    background-image: url('./pic-2.png');
+}
+.i3{
+    background-image: url('./pic-3.png');
+}
+.i4{
+    background-image: url('./pic-4.png');
+}
+.i5{
+    background-image: url('./pic-5.png');
+}
+.i6{
+    background-image: url('./pic-6.png');
+}
+.i7{
+    background-image: url('./pic-7.png');
+}
+.i8{
+    background-image: url('./pic-8.png');
+}
+.i9{
+    background-image: url('./pic-9.png');
+}
+.i10{
+    background-image: url('./pic-10.png');
+}

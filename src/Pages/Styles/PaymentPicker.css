@@ -1,0 +1,51 @@
+.inner-box{
+    width: 31%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.payment-text{
+    font-size: 120%;
+}
+.bold2{
+    font-weight: 700;
+}
+.payment-selector{
+    cursor: pointer;
+    width: 100%;
+    height: 15%;
+    border-radius: 7px;
+    border: solid 2px rgb(197, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}
+.payment-lock1{
+    height: 15%;
+}
+.payment-selector-text{
+    margin-left: -27%;
+    font-size: 110%;
+    margin-bottom: 0%;
+    padding-right: 4%;
+}
+.secure-server-badge-text{
+    position: absolute;
+}
+.secure-server-badge-text{
+    font-size: 85%;
+    margin-top: 16%;
+    margin-left: 21%;
+}
+.encrypt-badge{
+    height: 20px;
+    margin-top: -3.8%;
+}
+.arrow{
+    position: absolute;
+    height: 5%;
+    margin-left: 27%;
+}

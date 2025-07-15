@@ -1,0 +1,11 @@
+.home-footer2{
+    width: 100%;
+    padding-left: 8%;
+    height: 22vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 80%;
+}

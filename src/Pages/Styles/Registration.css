@@ -1,0 +1,18 @@
+.register-body{
+    background-color: white;
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-body{
+    width: 23%;
+    height: 70%;
+}
+.register-next{
+    height: 15%;
+}
+.registerimg{
+    height: 30%;
+}

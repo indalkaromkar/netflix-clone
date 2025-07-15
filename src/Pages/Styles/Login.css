@@ -1,0 +1,108 @@
+.barnd-logo-login{
+    margin-left: -72%;
+}
+.login-container{
+    margin-top: 6%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    width: 30%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error-preview-2{
+    text-align: left;
+    padding-left: 14%;
+    height: 11vh;
+    color: black;
+}
+.login-inner-container{
+    width: 72%;
+    height: auto;
+}
+.home-main-container-error{
+    height: auto;
+}
+.signin-header{
+    font-weight: 700;
+    margin-bottom: 12%;
+    text-align: left;
+}
+.email-input-login,.email-input-login:focus{
+    height: 12%;
+    background-color: transparent;
+    border-color: #606060;
+    color: #ffffff;
+    box-shadow: none;
+}
+.email-input-login::placeholder{
+    color: #c4c4c4;
+}
+.email-input-login:focus{
+    border-color: #ffffff;
+}
+.email-input-login{
+    margin-top: 3.9%;
+}
+.signin-btn2{
+    margin-top: 8%;
+    height: 9%;
+    margin-bottom: 4.5%;
+    font-size: 100%;
+    font-weight: 600;
+}
+.signin-text{
+    color: #a6a6a6;
+}
+.signin-btn-code{
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 0%;
+}
+.signin-btn-code:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.signin-check-box{
+    margin-top: 8%;
+    color: white;
+}
+.signup-link{
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.signup-link:hover{
+    text-decoration: underline;
+}
+.new-to-netflix{
+    text-align: left;
+    margin-top: 5%;
+    color: #a6a6a6;
+}
+.signin-info{
+    color: #a6a6a6;
+    text-align: left;
+    font-size: 80%;
+}
+.message-rate{
+    font-size: 85%;
+    margin-top: 3%;
+    color: rgb(189, 189, 189);
+}
+.home-main-hero2{
+    background-image: url('../signIn.jpg');
+    background-size: cover;
+    height: 105vh;
+}
+.home-main-shadow2-error{
+    height: 105vh;
+}
+.login-btn{
+    height: 6.5vh;
+}
+.passwordToggle3{
+    margin-top: 1.5%;
+    margin-left: 7.5%;
+}

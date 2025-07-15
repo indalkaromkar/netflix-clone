@@ -1,0 +1,73 @@
+.nav-bar{
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    color: white;
+}
+.navBar-profileIcon{
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    cursor: default;
+}
+.navBar-profileIcon:hover{
+    border: none;
+}
+.right-nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.nav-logo{
+    height: 65px;
+}
+.right-btn-nav{
+    font-size: 140%;
+}
+.tab-navBar{
+    color: #d2d2d2;
+}
+.tab-navBar:hover{
+    color: white;
+    font-weight: 400;
+}
+.dropProfile .dropdown-menu {
+    background-color: black;
+}
+.dropProfile .dropdown-item {
+    color: white;
+    font-size: 90%;
+    padding-right: 55px;
+}
+.dropProfile .dropdown-item:hover,
+.dropProfile .dropdown-item:focus {
+    background-color: transparent; 
+    color: white; 
+    text-decoration: underline;
+}
+.divider-dropmenu2{
+    color: white;
+    margin: 10px 0px;
+}
+.custom-dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+.bi-pencil{
+    color: rgb(148, 148, 148);
+    font-size: 120%;
+    margin-left: 2%;
+    padding-right: 12%;
+}
+.logout-dropItem{
+    text-align: center;
+    color: white;
+    padding: 0% 19.5%;
+    font-size: 90%;
+}
+.logout-dropItem:hover{
+    text-decoration: underline;
+}
+
+  

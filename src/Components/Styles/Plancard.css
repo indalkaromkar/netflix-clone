@@ -1,0 +1,84 @@
+.card-container{
+    height: 100%;
+    width: 19%;
+    border-radius: 20px;
+    border: solid 1px rgb(210, 210, 210);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+.card-container.shadow-lg {
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 1);
+}
+.premium{
+    border-radius: 0px 0px 20px 20px;
+}
+.premium-header{
+    background-color: rgb(75, 74, 74);
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    height: 3.5%;
+    width: 19%;
+    margin-top: -1.7%;
+    display: flex;
+    justify-content: center;
+}
+.premium-header.bg-color{
+    background-color: #e50914;
+}
+.premium-header-text{
+    color: white;
+    text-align: center;
+    font-size: 85%;
+    font-weight: 600;
+    padding-bottom: 0%;
+}
+.top{
+    margin-top: 3%;
+    border-radius: 20px;
+    background-color: red;
+    width: 94%;
+    height: 15%;
+    line-height: 3%;
+    text-align: left;
+    padding-left: 6%;
+    padding-top: 5%;
+    font-size: 80%;
+    color: white;
+}
+.pckg-name{
+    font-weight: 700;
+    line-height: 90%;
+}
+.lengthy{
+    line-height: 100%;
+}
+.bottom{
+    padding-top: 12%;
+    width: 82%;
+    height: 82%;
+    line-height: 50%;
+    text-align: left;
+    padding-bottom: 15%;
+}
+.card-heading{
+    font-size: 90%;
+    color: rgb(97, 96, 96);
+    font-weight: 500;
+}
+.card-value{
+    font-size: 100%;
+    font-weight: 500;
+}
+.selected-tick{
+    position: absolute;
+    margin-top: 4.3%;
+    margin-left: 14%;
+    height: 25px;
+    width: 25px;
+}
+.tick-mark{
+    height: 100%;
+}

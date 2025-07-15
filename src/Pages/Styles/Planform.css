@@ -1,0 +1,52 @@
+.body-container2-1{
+    margin-top: 3%;
+    width: 78%;
+    height: 10vh;
+    text-align: left;
+}
+.body-container2-2{
+    margin-top: 3%;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%;
+    gap: 0.9%;
+}
+.body-container2-3{
+    width: 78%;
+    height: 20vh;
+    padding-top: 1%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planform-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planform-info{
+    font-size: 90%;
+    color: rgb(78, 78, 78);
+    text-align: left;
+}
+.terms-of-use-text{
+    color: rgb(71, 71, 239);
+}
+.btn-5{
+    font-size: 120%;
+    width: 30%;
+    height: 40%;
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+}
+.btn-5:hover{
+    background-color: rgb(204, 0, 0);
+}

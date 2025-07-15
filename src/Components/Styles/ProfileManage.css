@@ -1,0 +1,17 @@
+.profile-manage:hover{
+    border: 2px solid white;
+}
+.profile-manage{
+    background-size: cover;
+}
+.edit-cover{
+    height: 30%;
+    z-index: 9999;
+}
+.profile-preview-overlay {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.5);   
+}

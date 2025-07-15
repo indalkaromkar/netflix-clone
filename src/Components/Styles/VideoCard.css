@@ -1,0 +1,24 @@
+.vCard-Container {
+    height: 100%;
+    width: 103%;
+    border-radius: 7px;
+    z-index: 999;
+    cursor: pointer;
+    background-size: 112%; 
+    background-position: center;
+    transition: background-size 2s ease, background-position 2s ease; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    background-repeat: no-repeat;
+}
+
+.vCard-Container:hover {
+    background-size: 130%;
+    background-position: center;
+}
+
+.v1 {
+    background-image: url('./v1.png');
+}

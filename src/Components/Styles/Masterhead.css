@@ -1,0 +1,18 @@
+.ms-head{
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75%;
+    border-bottom: solid 1px #c5c5c5;
+}
+.brand-logo2{
+    height: 110%;
+}
+.signin-btn{
+    cursor: pointer;
+}
+.signin:hover{
+    text-decoration: underline;
+}

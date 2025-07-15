@@ -1,0 +1,120 @@
+.credit-container{
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    padding-top: 2.4%;
+}
+.body-container2{
+    display: flex;
+    justify-content: center;
+}
+.payment-types-container{
+    display: flex;
+    gap: 2%;
+}
+.input-sections,.input-sections2{
+    width: 100%;
+    height: 7vh;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-sections2{
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+}
+.credit-input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(131, 131, 131);
+}
+.credit-input:focus{
+    box-shadow: none;
+    border-color: black;
+    border-style: double;
+}
+.package-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    height: 13vh;
+    background-color: rgb(237, 235, 235);
+    margin-top: 2.8%;
+    margin-bottom: 5%;
+    line-height: 150%;
+    justify-content: center;
+    padding-left: 4%;
+}
+.package-price{
+    font-weight: 600;
+    margin-bottom: 0%;
+}
+.package-name{
+    margin-bottom: 0%;
+}
+.package-change{
+    position: absolute;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 21%;
+}
+.package-change:hover{
+    text-decoration: underline;
+}
+.payment-terms{
+    text-align: justify;
+    font-size: 80%;
+    color: rgb(132, 132, 132);
+    margin-bottom: 1%;
+}
+.check-box{
+    display: flex;
+    color: rgb(132, 132, 132);
+}
+.ch-box:active{
+    box-shadow: none;
+}
+.input-icon{
+    position: absolute;
+    margin-left: 23%;
+    height: 5%;
+}
+.input-icon-cvv{
+    position: absolute;
+    margin-left: 23%;
+    height: 4%;
+}
+.uncheck-error{
+    color: rgb(212, 0, 0);
+    font-weight: 400;
+}
+.fill-error{
+    color: rgb(212, 0, 0);
+    font-size: 80%;
+}
+.fill-error-conatiner{
+    display: flex;
+}
+.fill-error-left{
+    width: 51.5%;
+}
+.fill-error-right{
+    width: 48.5%;
+}
+.input-icon5{
+    height: 3.7%;
+}
+.payment-error{
+    padding-top: 6%;
+    padding-bottom: 6%;
+    height: 25vh;
+}
+.payment-error-text{
+    margin-left: 3%;
+}
